@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://br657aqgcmxgu"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_yn5ya"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kolkp"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxfck"]
+albedo_color = Color(1, 0.266667, 0.317647, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_g7btv"]
+material = SubResource("StandardMaterial3D_qxfck")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_yn5ya")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+
+[node name="LeftController" type="XRController3D" parent="XROrigin3D"]
+tracker = &"left_hand"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/LeftController"]
+mesh = SubResource("BoxMesh_kolkp")
+
+[node name="RightController" type="XRController3D" parent="XROrigin3D"]
+tracker = &"right_hand"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/RightController"]
+mesh = SubResource("BoxMesh_kolkp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0688511, 0.997627, 0, -0.997627, -0.0688511, 0, 1.90579, -0.208532)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.71715)
+mesh = SubResource("SphereMesh_g7btv")
