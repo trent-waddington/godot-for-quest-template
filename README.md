@@ -5,6 +5,9 @@ Looking for help!
 
 HOW TO
 
+I assume you have followed the [Export For Android](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html) steps.
+You have some Android build tools installed and have configured a keystore as requested.
+
 1. Clone or download and unzip this project
 2. Open in Godot (you can try Importing the zip? I don't know)
 3. Project -> Project Settings -> Config and rename it to something uniquely you right now
@@ -17,5 +20,6 @@ HOW TO
 10. The export begins. You will see gradle stuff. If you get errors here, something went wrong. You have fun with that.
 11. Your headset should pop up a window that says you don't have the plugins installed. (NO IT SHOULDN'T - if you did steps 5 and 6)
 12. For me this is the end of the story.. I get darkness. If I look up and to the left I can catch a glimpse of a PAUSE button. Mocking me.
-    
+13. Turns out you need to use Compatibility renderer on Godot 4.2 (this branch) but the Mobile render is working on Godot 4.3 (godot-4.3 branch)
+
 
