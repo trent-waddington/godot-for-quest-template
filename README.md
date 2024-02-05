@@ -20,6 +20,6 @@ You have some Android build tools installed and have configured a keystore as re
 10. The export begins. You will see gradle stuff. If you get errors here, something went wrong. You have fun with that.
 11. Your headset should pop up a window that says you don't have the plugins installed. (NO IT SHOULDN'T - if you did steps 5 and 6)
 12. For me this is the end of the story.. I get darkness. If I look up and to the left I can catch a glimpse of a PAUSE button. Mocking me.
-13. Turns out you need to use Compatibility renderer on Godot 4.2 (this branch) but the Mobile render is working on Godot 4.3 (godot-4.3 branch)
+13. Turns out you need to use Compatibility renderer on Godot 4.2 (main branch) but the Mobile render is working on Godot 4.3 (godot-4.3 this branch)
 
 
